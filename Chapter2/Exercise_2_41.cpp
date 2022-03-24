@@ -4,12 +4,15 @@
 
 #include <iostream> 
 #include <string>
+#include "Sales_data.h"
 
+/*
 struct Sales_data {
     std::string ISBN;
     unsigned int BooksSold = 0;
     double revenue = 0;
 };
+*/
 
 int main() {
     Sales_data data1, data2;
