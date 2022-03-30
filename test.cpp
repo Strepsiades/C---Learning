@@ -1,6 +1,12 @@
 #include<iostream>
+#include<string>
+
+using std::string;
+
 int main() 
 {
-    std::cout << "Helleeeeo122211 World" << std::endl;
-    return -1;
+vector<int> v{1,2,3,4,5,6,7,8,9};
+for (auto &i : v) // for each element in v (note: i is a reference)
+i *= i; // square the element value
+\
 }
