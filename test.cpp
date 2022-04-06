@@ -1,12 +1,12 @@
-#include<iostream>
-#include<string>
+#include <iostream>
 
-using std::string;
 
-int main() 
-{
-vector<int> v{1,2,3,4,5,6,7,8,9};
-for (auto &i : v) // for each element in v (note: i is a reference)
-i *= i; // square the element value
-\
+double square(double x) {return x * x;}
+
+int main(){
+    int x;
+    std::cin >> x;
+    std::cout << square(x) << std::endl;
+
+
 }
