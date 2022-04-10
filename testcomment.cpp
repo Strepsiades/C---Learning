@@ -1,3 +1,2 @@
-int main() {
-    std::cout << /* "*/" */;
-}
+#include <iostream>
+#include <vector>
