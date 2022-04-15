@@ -1,5 +1,8 @@
-//Exercise 7.7: Rewrite the transaction-processing program you wrote for the
-//exercises in § 7.1.2 (p. 260) to use these new functions.
+//Exercise 7.12: Move the definition of the Sales_data constructor that
+//takes an istream into the body of the Sales_data class.
+
+//Exercise 7.11: Add constructors to your Sales_data class and write a
+//program to use each of the constructors.
 
 #include<iostream>
 #include<string>
@@ -7,6 +10,18 @@
 using namespace std;
 
 struct Sales_data {
+    //constructors:
+    Sales_data() = default;
+    Sales_data(const string &s):bookNo(s){ }
+    Sales_data(const string &s, unsigned u, double p):bookNo(s), units_sold(u), revenue(u*p){ }
+    Sales_data(istream& is){
+        double price;
+        is >> bookNo >> units_sold >> price;
+        revenue = price * units_sold;
+    }
+    
+    
+    
     // new members: operations on Sales_data objects
     std::string isbn() const { return bookNo; }
     Sales_data& combine(const Sales_data&);
@@ -38,9 +53,8 @@ Sales_data add(const Sales_data& a, const Sales_data& b){
 }
 
 int main(){
-    Sales_data book, book2;
-    read(cin, book);
-    read(cin, book2);
+    Sales_data book(cin);
+    Sales_data book2("90001", 10, 10);
     Sales_data sum = add(book, book2);
     print(cout, sum);
 }
