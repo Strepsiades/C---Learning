@@ -1,24 +1,11 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode currl1(), currl2();
-        ListNode result();
+#include<string>
+#include<iostream>
 
-        while(currl1.next != nullptr || currl2.next != nullptr){
-            
-        }
+using namespace std;
 
-
-
-    }
-};
+int main(){
+    int i;
+    cin >> i;
+    cin.clear(cin.rdstate());
+    cout << cin.rdstate();
+}
